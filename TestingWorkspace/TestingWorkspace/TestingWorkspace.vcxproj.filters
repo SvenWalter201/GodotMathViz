@@ -15,15 +15,21 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="TestingWorkspace.cpp">
+    <ClCompile Include="Plotter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Plotter.cpp">
+    <ClCompile Include="gdlibrary.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gdexample.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Plotter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gdexample.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
