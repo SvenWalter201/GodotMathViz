@@ -2,10 +2,16 @@
 //
 
 #include <iostream>
+#include "Plotter.h"
+
+using namespace MathViz;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    int resolution = 10;
+    float amplitude = 5;
+    Plotter p = Plotter(amplitude, resolution);
+    p.PlotAmount(0,5);
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
