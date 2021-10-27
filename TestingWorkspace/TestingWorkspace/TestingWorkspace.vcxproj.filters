@@ -24,12 +24,18 @@
     <ClCompile Include="gdexample.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="FunctionLibrary.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Plotter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="gdexample.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FunctionLibrary.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

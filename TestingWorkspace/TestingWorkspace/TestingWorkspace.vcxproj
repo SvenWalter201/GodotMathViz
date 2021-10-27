@@ -179,11 +179,13 @@
     </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="FunctionLibrary.cpp" />
     <ClCompile Include="gdexample.cpp" />
     <ClCompile Include="gdlibrary.cpp" />
     <ClCompile Include="Plotter.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="FunctionLibrary.h" />
     <ClInclude Include="gdexample.h" />
     <ClInclude Include="Plotter.h" />
   </ItemGroup>

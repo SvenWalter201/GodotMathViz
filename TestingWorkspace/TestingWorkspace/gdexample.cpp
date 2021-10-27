@@ -11,7 +11,7 @@ void GDExample::_register_methods()
     //register property with getter and setter
     register_property<GDExample, float>("speed", &GDExample::set_speed, &GDExample::get_speed, 1.0); 
 
-    register_signal<GDExample>((char*)"position_changed", "node", GODOT_VARIANT_TYPE_OBJECT, "new_pos", GODOT_VARIANT_TYPE_VECTOR2);
+    //register_signal<GDExample>((char*)"position_changed", "node", GODOT_VARIANT_TYPE_OBJECT, "new_pos", GODOT_VARIANT_TYPE_VECTOR2);
 }
 
 GDExample::GDExample() 
@@ -29,24 +29,14 @@ void GDExample::_init()
     time_passed = 0.0;
     amplitude = 10.0;
     speed = 1.0;
-    time_emit = 0.0;
+    //time_emit = 0.0;
 }
 
 void GDExample::_process(float delta) 
 {
     time_passed += delta;
 
-    Vector2 new_position = Vector2(
-        amplitude + (amplitude * sin(time_passed * 2.0 * speed)),
-        amplitude + (amplitude * cos(time_passed * 1.5 * speed)));
-
+    float yPosition = FunctionLibrary::Wave2D(0,time_passed);
+    Vector2 new_position = Vector2(0, amplitude * yPosition);
     set_position(new_position);
-
-    time_emit += delta;
-    if (time_emit > 1.0)
-    {
-        emit_signal("position_changed", this, new_position);
-
-        time_emit = 0.0;
-    }
 }
