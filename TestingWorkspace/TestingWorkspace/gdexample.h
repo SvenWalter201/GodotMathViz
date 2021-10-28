@@ -1,19 +1,28 @@
 #pragma once
 
 #include <Godot.hpp>
-#include <Sprite.hpp>
 #include "FunctionLibrary.h"
+#include <vector>
+#include <iostream>
+#include <CSGBox.hpp>
+#include <Spatial.hpp>
 
 namespace godot {
 
-    class GDExample : public Sprite {
-        GODOT_CLASS(GDExample, Sprite)
+    class GDExample : public Spatial {
+        GODOT_CLASS(GDExample, Spatial)
 
     private:
         float time_passed;
         //float time_emit;
+        float cubeSize;
         float amplitude;
         float speed;
+        int resolution;
+        float resPerCube;
+        int function;
+        std::vector<CSGBox*> nodes;
+        
 
     public:
         static void _register_methods();
@@ -29,5 +38,4 @@ namespace godot {
 
         inline float get_speed() { return speed; }
     };
-
 }
