@@ -183,11 +183,14 @@
     <ClCompile Include="gdexample.cpp" />
     <ClCompile Include="gdlibrary.cpp" />
     <ClCompile Include="Plotter.cpp" />
+    <ClCompile Include="PlotterNode.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Common.h" />
     <ClInclude Include="FunctionLibrary.h" />
     <ClInclude Include="gdexample.h" />
     <ClInclude Include="Plotter.h" />
+    <ClInclude Include="PlotterNode.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
